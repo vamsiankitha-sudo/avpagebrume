@@ -1,6 +1,6 @@
 # AV Pagebrume
 
-Static website for [AV Pagebrume](https://vamsiankitha-sudo.github.io/avpagebrume/), a small self-publishing brand. GitHub Pages serves these files from the `main` branch, root folder. There is no build step.
+Static website for [AV Pagebrume](https://vamsiankitha-sudo.github.io/avpagebrume/), a small self-publishing brand. GitHub Pages serves these files from the `main` branch, root folder. There is no build step. The free coloring pages can be colored in the browser (`js/color.js`) or downloaded as PDFs.
 
 ## Turn on GitHub Pages
 
