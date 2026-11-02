@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vamsiankitha-sudo.github.io/avpagebrume/sitemap.xml
