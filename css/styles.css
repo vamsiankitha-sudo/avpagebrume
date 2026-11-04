@@ -533,3 +533,64 @@ button.button:disabled {
   cursor: crosshair;
   touch-action: manipulation;
 }
+
+.page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.15rem;
+  margin-top: 1.35rem;
+}
+
+.page-block {
+  margin-top: 2.75rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.page-block > * + * {
+  margin-top: 0.8rem;
+}
+
+.page-block > .studio {
+  margin-top: 1.15rem;
+}
+
+.talk-label {
+  margin-top: 0.9rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.more-printables {
+  margin-top: 2.75rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.more-printables > p {
+  max-width: var(--measure);
+}
+
+.preview-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.preview-grid figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 720px) {
+  .print-grid.pair {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 46rem;
+  }
+
+  .preview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 52rem;
+  }
+}
