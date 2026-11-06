@@ -85,69 +85,170 @@
   </header>
 
   <main id="main">
-    <section class="season-hero wrap" aria-labelledby="season-heading">
-      <div class="season-banner">
-        <a class="season-mark" href="./">
-          <picture>
-            <source srcset="assets/logo.webp" type="image/webp">
-            <img src="assets/logo.jpg" alt="AV Pagebrume" width="880" height="880" fetchpriority="high">
-          </picture>
-        </a>
-        <div class="season-copy">
-          <div class="festive-ornament" aria-hidden="true">
-            <svg class="diya" viewBox="0 0 80 64" width="72" height="58" focusable="false">
-              <path class="diya-flame" d="M40 2c7 9 13 15 13 24a13 13 0 0 1-26 0c0-9 6-15 13-24z" fill="#e2a23a"></path>
-              <path d="M40 16c2.6 3.4 4.2 5.6 4.2 8.2a4.2 4.2 0 0 1-8.4 0c0-2.6 1.6-4.8 4.2-8.2z" fill="#fff6dc"></path>
-              <path d="M14 46c1.2 11 50.6 11 52 0-6 8-46 8-52 0z" fill="#f0d2a4" stroke="#2b2b2b" stroke-width="1.7" stroke-linejoin="round"></path>
-              <path d="M18 46h44" fill="none" stroke="#2b2b2b" stroke-width="1.6" stroke-linecap="round"></path>
-              <path d="M40 46V36" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linecap="round"></path>
-            </svg>
-            <div class="light-row">
-              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-            </div>
-          </div>
-          <p class="kicker" data-season-text="kicker">Festival of Lights</p>
-          <h1 id="season-heading" class="season-title" data-season-text="title">Happy Diwali</h1>
-          <p class="season-hindi" lang="hi" data-season-text="hindi">शुभ दीपावली</p>
-          <p class="lede" data-season-text="lede">Max, Coco, Freya, and Bruno help at home this week: a card, something sweet, a welcome, and a careful look around before the family gathers.</p>
-          <div class="actions">
-            <a class="button" data-season-link="primary" href="free-printables/world-kindness-day/" data-href-diwali="free-printables/world-kindness-day/" data-href-kindness="free-printables/world-kindness-day/" data-href-thanksgiving="books/little-animal-helpers/" data-href-christmas="free-printables/gift-tracker/" data-href-everyday="books/little-animal-helpers/"><span data-season-text="primary">Color with the helpers</span></a>
-            <a class="button secondary" data-season-link="secondary" href="books/little-animal-helpers/" data-href-diwali="books/little-animal-helpers/" data-href-kindness="books/little-animal-helpers/" data-href-thanksgiving="free-printables/world-kindness-day/" data-href-christmas="free-printables/world-kindness-day/" data-href-everyday="free-printables/"><span data-season-text="secondary">See the book</span></a>
-          </div>
-          <p class="next-note" data-season-next>
-            <a href="free-printables/world-kindness-day/" data-href-diwali="free-printables/world-kindness-day/" data-href-kindness="free-printables/gift-tracker/" data-href-thanksgiving="free-printables/gift-tracker/" data-href-christmas="free-printables/world-kindness-day/" data-href-everyday="free-printables/">World Kindness Day is 13 November</a><span data-next-rest> — free coloring pages.</span>
-          </p>
-          <p class="social-line">
-            <a href="https://in.pinterest.com/avpagebrume/" target="_blank" rel="noopener noreferrer">Pinterest<span class="visually-hidden"> (opens in a new tab)</span></a>
-            <a href="https://www.youtube.com/@avpagebrume" target="_blank" rel="noopener noreferrer">YouTube<span class="visually-hidden"> (opens in a new tab)</span></a>
-          </p>
+    <section class="season-hero" aria-labelledby="season-heading">
+      <div class="hero-lights motif-diwali" aria-hidden="true">
+        <svg viewBox="0 0 1200 72" preserveAspectRatio="none" focusable="false">
+          <path d="M0 38 C 90 8, 160 62, 270 34 S 430 6, 540 40 S 700 70, 820 30 S 980 4, 1200 36" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"></path>
+        </svg>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <svg class="doodle-side doodle-left motif-diwali" viewBox="0 0 180 230" aria-hidden="true" focusable="false">
+        <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+          <circle cx="78" cy="58" r="9"></circle>
+          <ellipse cx="78" cy="28" rx="7" ry="14"></ellipse>
+          <ellipse cx="100" cy="38" rx="7" ry="14" transform="rotate(45 100 38)"></ellipse>
+          <ellipse cx="108" cy="58" rx="7" ry="14" transform="rotate(90 108 58)"></ellipse>
+          <ellipse cx="100" cy="78" rx="7" ry="14" transform="rotate(135 100 78)"></ellipse>
+          <ellipse cx="78" cy="88" rx="7" ry="14"></ellipse>
+          <ellipse cx="56" cy="78" rx="7" ry="14" transform="rotate(45 56 78)"></ellipse>
+          <ellipse cx="48" cy="58" rx="7" ry="14" transform="rotate(90 48 58)"></ellipse>
+          <ellipse cx="56" cy="38" rx="7" ry="14" transform="rotate(135 56 38)"></ellipse>
+        </g>
+        <path d="M48 150 C 54 176, 128 180, 138 148 C 120 166, 66 166, 48 150 Z" fill="#f0d2a4" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+        <path d="M58 150 H128" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path class="diya-flame" d="M94 146 C 98 118, 122 112, 112 86 C 106 112, 88 118, 94 146 Z" fill="#e2a23a"></path>
+        <path d="M142 118 C 160 100, 168 78, 150 62" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M146 74 L156 58 L166 76" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      <svg class="doodle-side doodle-right motif-diwali" viewBox="0 0 170 200" aria-hidden="true" focusable="false">
+        <path d="M18 70 C 48 18, 92 22, 108 58 C 86 50, 48 78, 18 70 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
+        <path d="M28 66 C 58 52, 84 50, 104 58" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path>
+        <path d="M30 130 C 58 118, 78 90, 118 102" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"></path>
+        <path d="M104 88 L122 104 L100 112" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M40 168 C 46 190, 108 192, 116 166 C 100 180, 56 180, 40 168 Z" fill="#f0d2a4" stroke="currentColor" stroke-width="1.8"></path>
+        <path class="diya-flame" d="M78 164 C 82 144, 100 140, 92 120 C 88 140, 74 144, 78 164 Z" fill="#e2a23a"></path>
+      </svg>
+      <svg class="doodle-side doodle-left motif-kindness" viewBox="0 0 160 200" aria-hidden="true" focusable="false">
+        <path d="M30 90 C 55 30, 110 36, 124 78 C 96 68, 52 100, 30 90 Z" fill="none" stroke="currentColor" stroke-width="1.8"></path>
+        <path d="M40 86 C 70 70, 98 68, 120 78" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path>
+        <path d="M78 92 C 70 130, 86 160, 78 188" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+        <path d="M78 130 C 48 118, 36 150, 58 162 C 40 140, 58 122, 78 130 Z" fill="none" stroke="currentColor" stroke-width="1.6"></path>
+      </svg>
+      <svg class="doodle-side doodle-right motif-kindness" viewBox="0 0 150 180" aria-hidden="true" focusable="false">
+        <path d="M20 40 C 50 10, 100 18, 112 52 C 86 42, 46 58, 20 40 Z" fill="none" stroke="currentColor" stroke-width="1.8"></path>
+        <path d="M24 120 C 50 108, 72 86, 112 98" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M98 84 L116 100 L96 108" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      <svg class="doodle-side doodle-left motif-thanks" viewBox="0 0 160 200" aria-hidden="true" focusable="false">
+        <path d="M80 20 V170" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+        <path d="M80 50 C 40 40, 28 78, 52 86 C 36 62, 58 46, 80 50 Z" fill="none" stroke="currentColor" stroke-width="1.6"></path>
+        <path d="M80 78 C 120 66, 136 104, 110 114 C 128 90, 104 74, 80 78 Z" fill="none" stroke="currentColor" stroke-width="1.6"></path>
+        <path d="M80 112 C 42 108, 34 146, 60 150 C 42 128, 60 112, 80 112 Z" fill="none" stroke="currentColor" stroke-width="1.6"></path>
+      </svg>
+      <svg class="doodle-side doodle-right motif-thanks" viewBox="0 0 150 170" aria-hidden="true" focusable="false">
+        <path d="M18 90 C 48 78, 70 54, 112 68" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M98 54 L116 70 L96 78" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M40 120 C 70 100, 96 128, 78 150 C 96 132, 70 118, 40 120 Z" fill="none" stroke="currentColor" stroke-width="1.6"></path>
+      </svg>
+      <svg class="doodle-side doodle-left motif-christmas" viewBox="0 0 160 200" aria-hidden="true" focusable="false">
+        <path d="M80 16 V176" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+        <path d="M80 48 C 36 36, 28 78, 58 84 C 36 60, 58 44, 80 48 Z" fill="none" stroke="currentColor" stroke-width="1.6"></path>
+        <path d="M80 86 C 124 74, 134 116, 104 122 C 126 98, 104 82, 80 86 Z" fill="none" stroke="currentColor" stroke-width="1.6"></path>
+        <circle cx="46" cy="40" r="3" fill="currentColor"></circle>
+        <circle cx="124" cy="130" r="3" fill="currentColor"></circle>
+      </svg>
+      <svg class="doodle-side doodle-right motif-christmas" viewBox="0 0 150 170" aria-hidden="true" focusable="false">
+        <path d="M20 96 C 52 82, 74 60, 116 74" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M102 60 L120 76 L100 84" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M48 40 C 70 22, 96 36, 86 58 C 100 40, 74 28, 48 40 Z" fill="none" stroke="currentColor" stroke-width="1.6"></path>
+      </svg>
+      <div class="wrap hero-copy">
+        <div class="hero-ornament" aria-hidden="true">
+          <svg class="motif-diwali" viewBox="0 0 86 70" width="78" height="64" focusable="false">
+            <path d="M12 46 C 16 62, 70 64, 76 44 C 64 56, 24 56, 12 46 Z" fill="#f0d2a4" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
+            <path d="M20 46 H68" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path>
+            <path class="diya-flame" d="M44 44 C 47 26, 64 22, 56 6 C 52 22, 40 26, 44 44 Z" fill="#e2a23a"></path>
+          </svg>
+          <svg class="motif-kindness" viewBox="0 0 86 70" width="78" height="64" focusable="false">
+            <path d="M16 40 C 32 12, 68 16, 74 40 C 58 32, 30 48, 16 40 Z" fill="none" stroke="currentColor" stroke-width="1.8"></path>
+            <path d="M22 38 C 40 28, 58 28, 72 40" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path>
+          </svg>
+          <svg class="motif-thanks" viewBox="0 0 86 70" width="78" height="64" focusable="false">
+            <path d="M43 8 V62" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path>
+            <path d="M43 22 C 18 16, 14 40, 30 42 C 16 28, 28 20, 43 22 Z" fill="none" stroke="currentColor" stroke-width="1.5"></path>
+            <path d="M43 36 C 68 30, 74 52, 56 56 C 70 42, 58 34, 43 36 Z" fill="none" stroke="currentColor" stroke-width="1.5"></path>
+          </svg>
+          <svg class="motif-christmas" viewBox="0 0 86 70" width="78" height="64" focusable="false">
+            <path d="M43 6 V64" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path>
+            <path d="M43 18 C 18 12, 16 36, 32 38 C 18 24, 30 16, 43 18 Z" fill="none" stroke="currentColor" stroke-width="1.5"></path>
+            <path d="M43 34 C 68 28, 72 50, 54 54 C 68 42, 56 32, 43 34 Z" fill="none" stroke="currentColor" stroke-width="1.5"></path>
+            <circle cx="22" cy="14" r="2.4" fill="currentColor"></circle>
+          </svg>
+          <svg class="motif-everyday" viewBox="0 0 86 70" width="78" height="64" focusable="false">
+            <path d="M14 46 C 30 18, 58 22, 72 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+            <path d="M64 28 L74 38 L60 42" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <p class="kicker" data-season-text="kicker">Festival of Lights</p>
+        <h1 id="season-heading" class="season-title" data-season-text="title">Happy Diwali</h1>
+        <p class="season-hindi" lang="hi" data-season-text="hindi">शुभ दीपावली</p>
+        <p class="lede" data-season-text="lede">Max, Coco, Freya, and Bruno help at home this week: a card, something sweet, a welcome, and a careful look around before the family gathers.</p>
+        <div class="actions">
+          <a class="button" data-season-link="primary" href="free-printables/world-kindness-day/" data-href-diwali="free-printables/world-kindness-day/" data-href-kindness="free-printables/world-kindness-day/" data-href-thanksgiving="books/little-animal-helpers/" data-href-christmas="free-printables/gift-tracker/" data-href-everyday="books/little-animal-helpers/"><span data-season-text="primary">Color with the helpers</span></a>
+          <a class="button secondary" data-season-link="secondary" href="books/little-animal-helpers/" data-href-diwali="books/little-animal-helpers/" data-href-kindness="books/little-animal-helpers/" data-href-thanksgiving="free-printables/world-kindness-day/" data-href-christmas="free-printables/world-kindness-day/" data-href-everyday="free-printables/"><span data-season-text="secondary">See the book</span></a>
+        </div>
+        <p class="next-note" data-season-next>
+          <a href="free-printables/world-kindness-day/" data-href-diwali="free-printables/world-kindness-day/" data-href-kindness="free-printables/gift-tracker/" data-href-thanksgiving="free-printables/gift-tracker/" data-href-christmas="free-printables/world-kindness-day/" data-href-everyday="free-printables/">World Kindness Day is 13 November</a><span data-next-rest> — free coloring pages.</span>
+        </p>
+        <svg class="hero-arrow" viewBox="0 0 80 64" aria-hidden="true" focusable="false">
+          <path d="M40 4 C 44 22, 26 34, 40 54" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path>
+          <path d="M26 44 L40 58 L54 42" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </div>
+    </section>
+
+    <section class="tile-band" aria-labelledby="tiles-heading">
+      <div class="wrap">
+        <p class="kicker tile-band-kicker" data-season-text="print-kicker">This season</p>
+        <h2 id="tiles-heading" class="visually-hidden" data-season-text="print-title">Happy Diwali</h2>
+        <p class="visually-hidden" data-season-text="print-copy">The Diwali offer is this greeting, the story of the helpers, and coloring in the browser. World Kindness Day on 13 November is the next activity for kids. The Christmas gift tracker is here when you want to plan ahead.</p>
+        <div class="tile-grid">
+          <a class="picture-tile tile-book" href="books/little-animal-helpers/">
+            <span class="tile-copy">
+              <span class="tile-kicker">The book</span>
+              <span class="tile-title">Little Animal Helpers</span>
+              <span class="tile-sub">Ages 4–8</span>
+            </span>
+            <span class="tile-art">
+              <img src="books/little-animal-helpers/cover.webp" alt="" width="900" height="1173">
+            </span>
+          </a>
+          <a class="picture-tile tile-color" href="free-printables/world-kindness-day/">
+            <span class="tile-copy">
+              <span class="tile-kicker">In the browser</span>
+              <span class="tile-title">Color with the helpers</span>
+              <span class="tile-sub">Max, Coco, Freya, Bruno</span>
+            </span>
+            <span class="tile-art">
+              <img src="free-printables/world-kindness-day/max.webp" alt="" width="900" height="1165">
+              <img src="free-printables/world-kindness-day/coco.webp" alt="" width="900" height="1165">
+            </span>
+          </a>
+          <a class="picture-tile tile-kind" href="free-printables/world-kindness-day/">
+            <span class="tile-copy">
+              <span class="tile-kicker">13 November</span>
+              <span class="tile-title">World Kindness Day</span>
+              <span class="tile-sub">Five stories to color</span>
+            </span>
+            <span class="tile-art">
+              <img src="free-printables/world-kindness-day/freya.webp" alt="" width="900" height="1165">
+            </span>
+          </a>
+          <a class="picture-tile tile-gifts" href="free-printables/gift-tracker/">
+            <span class="tile-copy">
+              <span class="tile-kicker">For later</span>
+              <span class="tile-title">Christmas gift tracker</span>
+              <span class="tile-sub">A quiet two-page list</span>
+            </span>
+            <span class="tile-art">
+              <img src="free-printables/gift-tracker/page-1.jpg" alt="" width="900" height="1165">
+            </span>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section follow wrap" aria-labelledby="featured-heading">
-      <div class="feature">
-        <a class="cover-link" href="books/little-animal-helpers/">
-          <picture>
-            <source srcset="books/little-animal-helpers/cover.webp" type="image/webp">
-            <img class="cover" src="books/little-animal-helpers/cover.jpg" alt="Cover of Little Animal Helpers: Coloring Book for Kids Ages 4-8. Bruno the firefighter bear, Coco the cat with cupcakes, an elephant chef, a lion astronaut, a rabbit in medical scrubs, and a penguin police officer. A badge says 30 pages. The cover includes the words AV Pagebrume." width="900" height="1173">
-          </picture>
-        </a>
-        <div>
-          <p class="kicker">Featured book</p>
-          <h2 id="featured-heading">Little Animal Helpers</h2>
-          <p data-season-text="book">For Diwali they bring light in ordinary ways: a card at the door, something sweet to share, a place saved, and help at home.</p>
-          <p>Little Animal Helpers is a coloring book for kids ages 4-8. Max the Puppy is the speedy mail carrier, Coco the Cat is the sweet baker, Freya the Fox is the clever teacher, and Bruno the Bear is the brave firefighter.</p>
-          <p>For parents, grandparents, pre-K and kindergarten teachers, and homeschoolers.</p>
-          <div class="actions">
-            <a class="button" href="books/little-animal-helpers/">See the book</a>
-            <a class="button secondary" href="https://www.amazon.com/s?k=Little+Animal+Helpers+9798166876423" target="_blank" rel="noopener noreferrer">Find it on Amazon<span class="visually-hidden"> (opens in a new tab)</span></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section wrap" id="helpers" aria-labelledby="helpers-heading">
+    <section class="section cast-section wrap" id="helpers" aria-labelledby="helpers-heading">
       <p class="kicker">Meet the helpers</p>
       <h2 id="helpers-heading">Four friends, four jobs</h2>
       <p class="prose">Point or tap a helper to see how they help this week. Then color the page.</p>
@@ -211,40 +312,25 @@
       </div>
     </section>
 
-    <section class="section wrap" id="this-season" aria-labelledby="printables-heading">
-      <p class="kicker" data-season-text="print-kicker">This season</p>
-      <h2 id="printables-heading" data-season-text="print-title">Happy Diwali</h2>
-      <p class="prose" data-season-text="print-copy">The Diwali offer is this greeting, the story of the helpers, and coloring in the browser. World Kindness Day on 13 November is the next activity for kids. The Christmas gift tracker is here when you want to plan ahead.</p>
-      <div class="print-grid pair invite-grid">
-        <article class="invite-card is-lead" data-season-card="kindness">
-          <p class="kicker">November 13</p>
-          <h3>World Kindness Day</h3>
-          <p>Five short stories to read and color with Max, Coco, Freya, and Bruno.</p>
-          <figure>
-            <a href="free-printables/world-kindness-day/">
-              <picture>
-                <source srcset="free-printables/world-kindness-day/max.webp" type="image/webp">
-                <img class="sheet" src="free-printables/world-kindness-day/max.jpg" alt="Coloring page of Max the puppy delivering a card, for World Kindness Day." width="900" height="1165">
-              </picture>
-            </a>
-          </figure>
+    <section class="section book-section wrap" aria-labelledby="featured-heading">
+      <div class="book-spread">
+        <a class="cover-link" href="books/little-animal-helpers/">
+          <picture>
+            <source srcset="books/little-animal-helpers/cover.webp" type="image/webp">
+            <img class="cover" src="books/little-animal-helpers/cover.jpg" alt="Cover of Little Animal Helpers: Coloring Book for Kids Ages 4-8. Bruno the firefighter bear, Coco the cat with cupcakes, an elephant chef, a lion astronaut, a rabbit in medical scrubs, and a penguin police officer. A badge says 30 pages. The cover includes the words AV Pagebrume." width="900" height="1173">
+          </picture>
+        </a>
+        <div>
+          <p class="kicker">Featured book</p>
+          <h2 id="featured-heading">Little Animal Helpers</h2>
+          <p data-season-text="book">For Diwali they bring light in ordinary ways: a card at the door, something sweet to share, a place saved, and help at home.</p>
+          <p>Little Animal Helpers is a coloring book for kids ages 4-8. Max the Puppy is the speedy mail carrier, Coco the Cat is the sweet baker, Freya the Fox is the clever teacher, and Bruno the Bear is the brave firefighter.</p>
+          <p>For parents, grandparents, pre-K and kindergarten teachers, and homeschoolers.</p>
           <div class="actions">
-            <a class="button" href="free-printables/world-kindness-day/">Color these pages</a>
+            <a class="button" href="books/little-animal-helpers/">See the book</a>
+            <a class="button secondary" href="https://www.amazon.com/s?k=Little+Animal+Helpers+9798166876423" target="_blank" rel="noopener noreferrer">Find it on Amazon<span class="visually-hidden"> (opens in a new tab)</span></a>
           </div>
-        </article>
-        <article class="invite-card" data-season-card="gifts">
-          <p class="kicker">Christmas</p>
-          <h3>Gift tracker</h3>
-          <p>A two-page US Letter list for who, the idea, the budget, bought, and wrapped, plus a budget summary.</p>
-          <figure>
-            <a href="free-printables/gift-tracker/">
-              <img class="sheet" src="free-printables/gift-tracker/page-1.jpg" alt="Christmas gift tracker printable with columns for who, gift idea, budget, bought, and wrapped." width="900" height="1165">
-            </a>
-          </figure>
-          <div class="actions">
-            <a class="button" href="free-printables/gift-tracker/">See the tracker</a>
-          </div>
-        </article>
+        </div>
       </div>
     </section>
 

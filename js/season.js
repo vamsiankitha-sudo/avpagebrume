@@ -302,6 +302,13 @@
       setMeta('meta[property="og:description"]', season.docDescription);
       setMeta('meta[name="twitter:title"]', season.docTitle);
       setMeta('meta[name="twitter:description"]', season.docDescription);
+      setMeta('meta[name="theme-color"]', {
+        diwali: "#f4b942",
+        kindness: "#8fb89a",
+        thanksgiving: "#e2b08a",
+        christmas: "#1e4a38",
+        everyday: "#f7f4ee"
+      }[season.id] || "#f7f4ee");
     }
   }
 
