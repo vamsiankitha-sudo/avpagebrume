@@ -8,6 +8,9 @@
   --white: #fffcf7;
   --max: 68rem;
   --measure: 38rem;
+  --gold: #8a5a12;
+  --flame: #e2a23a;
+  --flame-deep: #c4783a;
 }
 
 *,
@@ -592,5 +595,393 @@ button.button:disabled {
   .preview-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     max-width: 52rem;
+  }
+}
+
+/* Seasonal homepage. Diwali is the shipped default, so the warm
+   banner shows when data-season is missing. Other windows clear it. */
+
+.season-hero {
+  padding: 0.85rem 0 0.15rem;
+}
+
+.season-banner {
+  display: block;
+  padding: 1.1rem 1.1rem 1.2rem;
+  background:
+    radial-gradient(circle at 0 0, rgba(226, 162, 58, 0.18), transparent 42%),
+    radial-gradient(circle at 100% 100%, rgba(141, 181, 150, 0.28), transparent 48%),
+    var(--white);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+}
+
+html[data-season]:not([data-season="diwali"]) .season-banner {
+  background: var(--white);
+}
+
+.season-mark {
+  display: block;
+  width: 5.25rem;
+  margin: 0 auto 0.65rem;
+}
+
+.season-mark img {
+  width: 100%;
+  height: auto;
+}
+
+.festive-ornament {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem 0.85rem;
+  margin-bottom: 0.45rem;
+}
+
+html[data-season]:not([data-season="diwali"]) .festive-ornament,
+html[data-season]:not([data-season="diwali"]) .season-hindi {
+  display: none;
+}
+
+.diya {
+  display: block;
+  flex: none;
+}
+
+.diya-flame {
+  animation: flame 2.6s ease-in-out infinite;
+}
+
+.light-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.light-row span {
+  width: 0.62rem;
+  height: 0.62rem;
+  border-radius: 50%;
+  background: var(--flame);
+  box-shadow: 0 0.42rem 0 -0.12rem var(--flame-deep), 0 0 0.55rem rgba(226, 162, 58, 0.9);
+  animation: lamp 2.8s ease-in-out infinite;
+}
+
+.light-row span:nth-child(odd) {
+  background: var(--sage);
+  box-shadow: 0 0.42rem 0 -0.12rem #6e9478, 0 0 0.45rem rgba(141, 181, 150, 0.85);
+  animation-delay: 0.45s;
+}
+
+.light-row span:nth-child(3n) {
+  animation-delay: 0.9s;
+}
+
+.season-copy {
+  text-align: center;
+}
+
+.season-copy .kicker {
+  justify-content: center;
+}
+
+.season-title {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+}
+
+.season-hindi {
+  margin-top: 0.2rem;
+  font-family: "Noto Sans Devanagari", "Nirmala UI", "Kohinoor Devanagari", sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+}
+
+.season-copy .lede {
+  margin-top: 0.7rem;
+}
+
+.season-copy .actions,
+.season-copy .social-line {
+  justify-content: center;
+}
+
+.next-note {
+  margin-top: 0.85rem;
+  font-size: 0.98rem;
+}
+
+.section.follow {
+  padding-top: 1.6rem;
+}
+
+.cover-link {
+  display: block;
+  width: min(100%, 22rem);
+  border-radius: 0.45rem;
+  transition: transform 0.2s ease;
+}
+
+.cover-link:hover {
+  transform: translateY(-4px);
+  text-decoration: none;
+}
+
+.helper-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-top: 1.15rem;
+}
+
+.helper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 0.6rem;
+  padding: 0.65rem 0.65rem 0.8rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.helper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(43, 43, 43, 0.08);
+}
+
+.helper-toggle {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: center;
+  cursor: pointer;
+}
+
+.helper-portrait {
+  display: block;
+  height: 7.35rem;
+  overflow: hidden;
+  border-radius: 0.4rem;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.helper-portrait picture,
+.helper-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.helper-portrait img {
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+.helper-name {
+  display: block;
+  margin-top: 0.55rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+.helper-job {
+  display: block;
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+.helper-beat {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  transition: max-height 0.25s ease, opacity 0.25s ease, margin-top 0.25s ease;
+}
+
+.helper:focus-within .helper-beat,
+.helper.is-open .helper-beat {
+  max-height: 8rem;
+  opacity: 1;
+  margin-top: 0.55rem;
+}
+
+.helper-color {
+  margin-top: 0.55rem;
+  font-size: 0.95rem;
+}
+
+.invite-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 0.65rem;
+  padding: 0.9rem 0.9rem 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.invite-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(43, 43, 43, 0.08);
+}
+
+.invite-card.is-lead {
+  outline: 1.5px solid var(--sage);
+  outline-offset: 0;
+}
+
+html:not([data-season]) .invite-card.is-lead,
+html[data-season="diwali"] .invite-card.is-lead {
+  outline-color: var(--gold);
+}
+
+html[data-season="christmas"] [data-season-card="gifts"] {
+  order: -1;
+  outline: 1.5px solid var(--sage);
+}
+
+html[data-season="christmas"] [data-season-card="kindness"],
+html[data-season="everyday"] .invite-card.is-lead {
+  outline: none;
+}
+
+#this-season .invite-card .sheet {
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.teaser-grid a {
+  display: block;
+  border-radius: 0.4rem;
+  transition: transform 0.2s ease;
+}
+
+.teaser-grid a:hover {
+  transform: translateY(-4px);
+  text-decoration: none;
+}
+
+.card-lift {
+  transition: transform 0.2s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+}
+
+.season-note {
+  max-width: var(--measure);
+  margin-top: 0.8rem;
+}
+
+.invite-grid {
+  align-items: stretch;
+}
+
+@keyframes lamp {
+  0%,
+  100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+
+@keyframes flame {
+  0%,
+  100% { opacity: 0.72; }
+  50% { opacity: 1; }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .helper:hover .helper-beat {
+    max-height: 8rem;
+    opacity: 1;
+    margin-top: 0.55rem;
+  }
+}
+
+@media (min-width: 720px) {
+  .season-hero {
+    padding-top: 1.15rem;
+  }
+
+  .season-banner {
+    display: grid;
+    grid-template-columns: 6.75rem minmax(0, 1fr);
+    gap: 0.35rem 1.5rem;
+    align-items: start;
+    padding: 1.25rem 1.5rem 1.35rem;
+  }
+
+  .season-mark {
+    width: 6.75rem;
+    margin: 0;
+  }
+
+  .season-copy,
+  .season-copy .kicker,
+  .festive-ornament,
+  .season-copy .actions,
+  .season-copy .social-line {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .season-copy .lede,
+  .season-copy .social-line {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .section.follow {
+    padding-top: 2.15rem;
+  }
+
+  .helper-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .helper-portrait {
+    height: 11rem;
+  }
+
+  .print-grid.pair.invite-grid {
+    max-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .light-row span,
+  .diya-flame {
+    animation: none;
+    opacity: 1;
+  }
+
+  .helper,
+  .helper-beat,
+  .invite-card,
+  .card-lift,
+  .cover-link,
+  .teaser-grid a {
+    transition: none;
+  }
+
+  .helper:hover,
+  .invite-card:hover,
+  .card-lift:hover,
+  .cover-link:hover,
+  .teaser-grid a:hover {
+    transform: none;
   }
 }
