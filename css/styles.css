@@ -8,12 +8,9 @@
   --white: #fffcf7;
   --max: 68rem;
   --measure: 38rem;
-  --gold: #8a5a12;
-  --flame: #e2a23a;
-  --flame-deep: #c4783a;
   --display: "Iowan Old Style", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
-  --marigold: #8e5410;
-  --terracotta: #9c4228;
+  --evergreen: #3e5c45;
+  --copper: #8c4a2f;
 }
 
 *,
@@ -601,120 +598,33 @@ button.button:disabled {
   }
 }
 
-/* Homepage seasons. Diwali is the shipped default (no data-season yet). */
+/* Holiday homepage. The shipped look is the late-autumn window
+   (no data-season yet, or data-season="holiday"). Everyday drops the
+   sprig and the gift line. Swap dates in js/season.js. */
 
 .season-hero {
   --hero-ink: #2b2b2b;
-  --hero-accent: #5c3a0c;
-  --hero-bg: linear-gradient(165deg, #f8d56a 0%, #f6c45a 40%, #f3a35a 100%);
+  --hero-accent: var(--evergreen);
   position: relative;
   overflow: hidden;
   margin: 0;
-  padding: 3.35rem 0 1.05rem;
-  background: var(--hero-bg);
+  padding: 2.4rem 0 2.6rem;
+  background:
+    radial-gradient(ellipse 42% 70% at 100% 0%, rgba(141, 181, 150, 0.34), transparent 70%),
+    radial-gradient(ellipse 46% 60% at 0% 100%, rgba(196, 138, 98, 0.22), transparent 68%),
+    linear-gradient(180deg, #fbf6ee 0%, #f4eadc 100%);
   color: var(--hero-ink);
 }
 
-html[data-season="kindness"] .season-hero {
-  --hero-accent: #234232;
-  --hero-bg: linear-gradient(165deg, #d7ebda 0%, #b7d4be 50%, #8fb89a 100%);
-}
-
-html[data-season="thanksgiving"] .season-hero {
-  --hero-accent: #6e3b12;
-  --hero-bg: linear-gradient(165deg, #f8e6d4 0%, #f0c7a4 48%, #e2b08a 100%);
-}
-
-html[data-season="christmas"] .season-hero {
-  --hero-ink: #f7f4ee;
-  --hero-accent: #e7c27a;
-  --hero-bg: linear-gradient(165deg, #1e4a38 0%, #143528 58%, #24543c 100%);
-}
-
 html[data-season="everyday"] .season-hero {
-  --hero-accent: #3e5c45;
-  --hero-bg: linear-gradient(165deg, #f7f4ee 0%, #e7f2e8 52%, #d5e4d6 100%);
+  background: var(--paper);
 }
 
-.hero-lights,
-.doodle-side,
-.hero-ornament .motif-diwali,
-.hero-ornament .motif-kindness,
-.hero-ornament .motif-thanks,
-.hero-ornament .motif-christmas,
-.hero-ornament .motif-everyday {
-  display: none;
+.hero-layout {
+  display: grid;
+  gap: 1.75rem;
+  align-items: center;
 }
-
-html:not([data-season]) .hero-lights,
-html[data-season="diwali"] .hero-lights,
-html:not([data-season]) .hero-ornament .motif-diwali,
-html[data-season="diwali"] .hero-ornament .motif-diwali {
-  display: block;
-}
-
-html[data-season="kindness"] .hero-ornament .motif-kindness,
-html[data-season="thanksgiving"] .hero-ornament .motif-thanks,
-html[data-season="christmas"] .hero-ornament .motif-christmas,
-html[data-season="everyday"] .hero-ornament .motif-everyday {
-  display: block;
-}
-
-.hero-lights {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0.35rem;
-  height: 4.2rem;
-  color: var(--hero-accent);
-  pointer-events: none;
-}
-
-.hero-lights svg {
-  position: absolute;
-  inset: 0.8rem 0 auto;
-  width: 100%;
-  height: 2.6rem;
-}
-
-.hero-lights span {
-  position: absolute;
-  top: 1.15rem;
-  width: 0.72rem;
-  height: 0.72rem;
-  border-radius: 50%;
-  background: var(--flame);
-  box-shadow: 0 0.55rem 0 -0.18rem var(--flame-deep), 0 0 0.7rem rgba(226, 162, 58, 0.95);
-  animation: lamp 2.8s ease-in-out infinite;
-}
-
-.hero-lights span:nth-child(odd) {
-  background: #fff4d2;
-  box-shadow: 0 0.55rem 0 -0.18rem #c47b12, 0 0 0.65rem rgba(255, 220, 140, 0.9);
-}
-
-.hero-lights span:nth-child(2) { left: 4%; animation-delay: 0.1s; }
-.hero-lights span:nth-child(3) { left: 13%; top: 1.7rem; animation-delay: 0.4s; }
-.hero-lights span:nth-child(4) { left: 22%; animation-delay: 0.2s; }
-.hero-lights span:nth-child(5) { left: 31%; top: 0.7rem; animation-delay: 0.7s; }
-.hero-lights span:nth-child(6) { left: 40%; top: 1.55rem; animation-delay: 0.15s; }
-.hero-lights span:nth-child(7) { left: 49%; animation-delay: 0.55s; }
-.hero-lights span:nth-child(8) { left: 58%; top: 1.75rem; animation-delay: 0.3s; }
-.hero-lights span:nth-child(9) { left: 67%; top: 0.65rem; animation-delay: 0.85s; }
-.hero-lights span:nth-child(10) { left: 76%; top: 1.45rem; animation-delay: 0.25s; }
-.hero-lights span:nth-child(11) { left: 85%; animation-delay: 0.6s; }
-.hero-lights span:nth-child(12) { left: 93%; top: 1.6rem; animation-delay: 0.45s; }
-
-.doodle-side {
-  position: absolute;
-  color: var(--hero-accent);
-  pointer-events: none;
-  width: 9.5rem;
-  height: auto;
-}
-
-.doodle-left { left: 2rem; bottom: 0.6rem; }
-.doodle-right { right: 3.25rem; top: 3.2rem; width: 7rem; }
 
 .hero-copy {
   position: relative;
@@ -724,48 +634,58 @@ html[data-season="everyday"] .hero-ornament .motif-everyday {
 
 .hero-ornament {
   display: flex;
+  align-items: flex-start;
   justify-content: center;
-  min-height: 2.8rem;
-  margin-bottom: 0.2rem;
-  color: var(--hero-accent);
+  gap: 0.35rem;
+  min-height: 2.6rem;
+  margin-bottom: 0.15rem;
+  color: var(--evergreen);
 }
 
-.hero-ornament svg { display: none; }
+.motif-sprig { display: block; }
 
-.season-hero .kicker {
-  justify-content: center;
-  color: var(--hero-accent);
+.motif-star {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--copper);
+  animation: ember 4.8s ease-in-out infinite;
 }
 
+html[data-season="everyday"] .hero-ornament { display: none; }
+
+.season-line { display: none; }
+
+html[data-season="holiday"] .season-line,
+html:not([data-season]) .season-line {
+  display: block;
+  max-width: 36rem;
+  margin: 0.85rem auto 0;
+  font-family: var(--display);
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  line-height: 1.35;
+  color: var(--copper);
+}
+
+.season-hero .kicker { justify-content: center; color: var(--hero-accent); }
 .season-hero .kicker::before { background: var(--hero-accent); }
 
 .season-title {
   font-family: var(--display);
   font-weight: 600;
-  font-size: clamp(4.15rem, 10vw, 5.6rem);
-  line-height: 0.92;
-  letter-spacing: -0.035em;
+  font-size: clamp(2.45rem, 5.4vw, 3.85rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
   color: var(--hero-ink);
 }
-
-.season-hindi {
-  margin-top: 0.35rem;
-  font-family: "Noto Sans Devanagari", "Nirmala UI", "Kohinoor Devanagari", sans-serif;
-  font-size: clamp(1.45rem, 2.8vw, 2.15rem);
-  color: var(--hero-accent);
-}
-
-html[data-season]:not([data-season="diwali"]) .season-hindi { display: none; }
 
 .season-hero .lede {
-  max-width: 36rem;
+  max-width: 38rem;
   margin: 0.9rem auto 0;
   color: var(--hero-ink);
-  font-size: clamp(1.12rem, 2vw, 1.35rem);
+  font-size: clamp(1.08rem, 1.7vw, 1.24rem);
 }
 
-.season-hero .actions,
-.season-hero .social-line { justify-content: center; }
+.season-hero .actions { justify-content: center; }
 
 .season-hero a { color: var(--hero-ink); text-decoration-color: var(--hero-accent); }
 
@@ -779,212 +699,60 @@ html[data-season]:not([data-season="diwali"]) .season-hindi { display: none; }
 
 .season-hero .button.secondary:hover {
   background: var(--hero-ink);
-  color: #fff8ee;
+  color: var(--paper);
 }
 
-html[data-season="christmas"] .season-hero .button.secondary:hover {
-  color: #143528;
-}
-
-.next-note {
-  margin-top: 0.9rem;
-  font-size: 1.02rem;
-}
-
-.hero-arrow {
+.hero-cover {
   display: block;
-  width: 2.6rem;
-  height: auto;
-  margin: 0.85rem auto 0;
-  color: var(--hero-accent);
-}
-
-.tile-band { padding: 0.55rem 0 0.25rem; }
-
-.tile-band-kicker { justify-content: center; }
-
-.tile-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.85rem;
-  margin-top: 0.35rem;
-}
-
-.picture-tile {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  padding: 1.05rem 1rem 0;
-  border-radius: 1.15rem;
-  color: #fff8ee;
-  text-decoration: none;
-  overflow: hidden;
-  box-shadow: 0 16px 34px rgba(43, 43, 43, 0.12);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.picture-tile:hover {
-  transform: translateY(-6px);
-  text-decoration: none;
-  box-shadow: 0 22px 44px rgba(43, 43, 43, 0.18);
-}
-
-.tile-book { background: var(--marigold); }
-.tile-color { background: var(--terracotta); }
-.tile-kind { background: #3e5c45; }
-.tile-gifts { background: #6e3b32; }
-
-.tile-kicker {
-  display: block;
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #fff1d6;
-}
-
-.tile-title {
-  display: block;
-  margin-top: 0.25rem;
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: clamp(1.7rem, 3vw, 2.15rem);
-  line-height: 1.02;
-  letter-spacing: -0.03em;
-  color: #fff8ee;
-}
-
-.tile-sub {
-  display: block;
-  margin-top: 0.3rem;
-  color: #fff1d6;
-  font-size: 0.98rem;
-}
-
-.tile-art {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 0.55rem;
-  margin-top: 0.35rem;
-  min-height: 0;
-  padding-top: 0.35rem;
-}
-
-.tile-art img {
-  width: 68%;
-  height: 13.5rem;
-  object-fit: cover;
-  object-position: center 18%;
-  border-radius: 0.45rem 0.45rem 0 0;
-  background: #fff;
-  box-shadow: 0 16px 28px rgba(20, 12, 4, 0.28);
-}
-
-.tile-book .tile-art img {
-  width: auto;
-  max-width: 74%;
-  height: 15rem;
-  object-fit: contain;
-  object-position: center bottom;
-  background: transparent;
-  transform: rotate(-2.5deg);
-  border-radius: 0.2rem;
-}
-
-.tile-color .tile-art img {
-  width: 46%;
-  height: 11.5rem;
-  object-position: center 36%;
-}
-
-.tile-color .tile-art img:first-child { transform: rotate(-5deg); }
-.tile-color .tile-art img:last-child { transform: rotate(4deg); margin-bottom: 0.7rem; }
-
-.tile-gifts .tile-art img {
-  width: 72%;
-  height: 12.5rem;
-  object-position: center top;
-  transform: rotate(2deg);
-}
-
-.cast-section h2,
-.book-spread h2,
-.book-section h2 {
-  font-family: var(--display);
-  font-weight: 600;
-  letter-spacing: -0.03em;
-}
-
-.book-section { padding-top: 2.4rem; }
-
-.book-spread {
-  display: grid;
-  gap: 1.5rem;
-  align-items: center;
-  padding: 1.1rem;
-  background: var(--white);
-  border-radius: 1.2rem;
-  box-shadow: 0 18px 48px rgba(43, 43, 43, 0.08);
-}
-
-.book-spread h2 { font-size: clamp(2.1rem, 4vw, 3.15rem); }
-
-.book-spread .cover-link { width: min(100%, 24rem); }
-
-.book-spread .cover {
-  width: 100%;
-  max-width: none;
-  box-shadow: 0 22px 46px rgba(43, 43, 43, 0.16);
-}
-
-.cast-section { padding-top: 2.6rem; }
-
-.helper-grid { margin-top: 1.35rem; }
-
-.helper {
-  padding: 0.85rem 0.85rem 1rem;
-  border: 0;
-  box-shadow: 0 14px 34px rgba(43, 43, 43, 0.08);
-}
-
-.helper:hover { box-shadow: 0 20px 40px rgba(43, 43, 43, 0.12); }
-
-.helper-portrait { height: 11.5rem; border: 0; }
-
-.helper-name {
-  font-family: var(--display);
-  font-size: 1.35rem;
-  font-weight: 600;
-}
-
-.cover-link {
-  display: block;
-  border-radius: 0.45rem;
+  width: min(100%, 20rem);
+  margin-inline: auto;
+  border-radius: 0.4rem;
   transition: transform 0.2s ease;
 }
 
-.cover-link:hover {
+.hero-cover img {
+  width: 100%;
+  border-radius: 0.35rem;
+  box-shadow: 0 22px 46px rgba(43, 43, 43, 0.16);
+}
+
+.hero-cover:hover {
   transform: translateY(-4px);
   text-decoration: none;
+}
+
+.cast-section { padding-top: 2.75rem; }
+
+.cast-section h2 {
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: -0.03em;
 }
 
 .helper-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
+  margin-top: 1.35rem;
 }
 
 .helper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: var(--white);
+  padding: 0.85rem 0.85rem 1rem;
+  border: 0;
   border-radius: 0.85rem;
+  background: var(--white);
+  box-shadow: 0 14px 34px rgba(43, 43, 43, 0.08);
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.helper:hover { transform: translateY(-4px); }
+.helper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(43, 43, 43, 0.12);
+}
 
 .helper-toggle {
   display: block;
@@ -1001,7 +769,9 @@ html[data-season="christmas"] .season-hero .button.secondary:hover {
 
 .helper-portrait {
   display: block;
+  height: 11.5rem;
   overflow: hidden;
+  border: 0;
   border-radius: 0.55rem;
   background: #fff;
 }
@@ -1015,7 +785,18 @@ html[data-season="christmas"] .season-hero .button.secondary:hover {
 
 .helper-portrait img {
   object-fit: cover;
-  object-position: center 40%;
+  object-position: center 42%;
+}
+
+.helper-name {
+  font-family: var(--display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+@media (max-width: 520px) {
+  .helper-name { font-size: 1.12rem; }
 }
 
 .helper-job {
@@ -1046,6 +827,92 @@ html[data-season="christmas"] .season-hero .button.secondary:hover {
   font-size: 1rem;
 }
 
+.home-print-section { padding-top: 3rem; }
+
+.home-prints {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.35rem;
+}
+
+.home-print {
+  display: flex;
+  flex-direction: column;
+  padding: 1.15rem 1.15rem 1.25rem;
+  border-radius: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.home-print.is-planner {
+  background: #2b2b2b;
+  color: #f7f4ee;
+}
+
+.home-print.is-story {
+  background: #fff8f1;
+  color: var(--ink);
+  border: 1px solid #eadccb;
+}
+
+.home-print-kicker {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.home-print.is-planner .home-print-kicker { color: #d9d3c8; }
+.home-print.is-story .home-print-kicker { color: var(--copper); }
+
+.home-print h3 {
+  margin-top: 0.35rem;
+  font-family: var(--display);
+  font-size: clamp(1.45rem, 2vw, 1.7rem);
+  font-weight: 600;
+}
+
+.home-print p { margin-top: 0.45rem; }
+
+.home-print a img,
+.home-print picture {
+  margin-top: 0.95rem;
+}
+
+.home-print img {
+  width: 100%;
+  height: 12.5rem;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 0.35rem;
+  background: #fff;
+}
+
+.home-print.is-story img { object-position: center 22%; }
+
+.home-print .button {
+  margin-top: 1rem;
+  align-self: flex-start;
+  text-decoration: none;
+}
+
+.home-print.is-planner .button {
+  background: #f7f4ee;
+  color: #2b2b2b;
+}
+
+.home-print.is-planner .button:hover {
+  background: #fff;
+  color: #2b2b2b;
+  box-shadow: none;
+}
+
+.home-print.is-planner a { color: #f7f4ee; }
+
+.home-print.is-planner :focus-visible { outline-color: #f7f4ee; }
+
+.home-print.is-story .button { color: var(--ink); }
+
+.more-link { margin-top: 1.25rem; }
+
 .invite-card {
   background: var(--white);
   border: 1px solid var(--line);
@@ -1059,17 +926,13 @@ html[data-season="christmas"] .season-hero .button.secondary:hover {
   box-shadow: 0 16px 36px rgba(43, 43, 43, 0.08);
 }
 
-.invite-card.is-lead { outline: 1.5px solid var(--sage); }
+.invite-card.is-lead { outline: 1.5px solid #2b2b2b; outline-offset: 2px; }
 
-html:not([data-season]) .invite-card.is-lead,
-html[data-season="diwali"] .invite-card.is-lead { outline-color: var(--gold); }
+html[data-season="holiday"] [data-season-card="gifts"],
+html:not([data-season]) [data-season-card="gifts"] { order: -1; }
 
-html[data-season="christmas"] [data-season-card="gifts"] {
-  order: -1;
-  outline: 1.5px solid var(--sage);
-}
+html[data-season="everyday"] [data-season-card="gifts"] { order: 0; }
 
-html[data-season="christmas"] [data-season-card="kindness"],
 html[data-season="everyday"] .invite-card.is-lead { outline: none; }
 
 .teaser-grid a,
@@ -1083,16 +946,9 @@ html[data-season="everyday"] .invite-card.is-lead { outline: none; }
   text-decoration: none;
 }
 
-.diya-flame { animation: flame 2.6s ease-in-out infinite; }
-
-@keyframes lamp {
-  0%, 100% { opacity: 0.55; }
-  50% { opacity: 1; }
-}
-
-@keyframes flame {
-  0%, 100% { opacity: 0.72; }
-  50% { opacity: 1; }
+@keyframes ember {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.95; }
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -1103,59 +959,58 @@ html[data-season="everyday"] .invite-card.is-lead { outline: none; }
   }
 }
 
-@media (min-width: 640px) {
-  .tile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 640px) {
+  .season-hero .button { flex: 1 1 100%; }
 }
 
-@media (min-width: 800px) {
-  .book-spread {
-    grid-template-columns: minmax(16rem, 24rem) minmax(0, 1fr);
-    gap: 2.75rem;
-    padding: 1.6rem 1.8rem 1.6rem 1.4rem;
-  }
-}
+@media (min-width: 860px) {
+  .season-hero { padding: 2.8rem 0 3rem; }
 
-@media (min-width: 960px) {
-  html:not([data-season]) .doodle-side.motif-diwali,
-  html[data-season="diwali"] .doodle-side.motif-diwali,
-  html[data-season="kindness"] .doodle-side.motif-kindness,
-  html[data-season="thanksgiving"] .doodle-side.motif-thanks,
-  html[data-season="christmas"] .doodle-side.motif-christmas {
-    display: block;
+  .hero-layout {
+    grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 22rem);
+    gap: 3rem;
   }
 
-  .season-hero { padding: 2.7rem 0 0.55rem; }
+  .hero-copy { text-align: left; }
 
-  .hero-ornament { display: none; }
+  .hero-ornament { justify-content: flex-start; }
 
-  .tile-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0.9rem;
+  .season-hero .kicker,
+  .season-hero .actions { justify-content: flex-start; }
+
+  .season-hero .lede,
+  html[data-season="holiday"] .season-line,
+  html:not([data-season]) .season-line {
+    margin-left: 0;
+    margin-right: 0;
   }
 
-  .picture-tile { min-height: 0; }
+  .hero-cover { margin-inline: 0; }
 
   .helper-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
-  .helper-portrait { height: 15rem; }
+  .helper-portrait { height: 14.5rem; }
+
+  .home-prints {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-lights span,
-  .diya-flame { animation: none; opacity: 1; }
+  .motif-star { animation: none; opacity: 0.75; }
 
   .helper,
   .helper-beat,
   .invite-card,
   .card-lift,
-  .cover-link,
-  .teaser-grid a,
-  .picture-tile { transition: none; }
+  .hero-cover,
+  .home-print,
+  .teaser-grid a { transition: none; }
 
   .helper:hover,
   .invite-card:hover,
   .card-lift:hover,
-  .cover-link:hover,
-  .teaser-grid a:hover,
-  .picture-tile:hover { transform: none; }
+  .hero-cover:hover,
+  .teaser-grid a:hover { transform: none; }
 }
