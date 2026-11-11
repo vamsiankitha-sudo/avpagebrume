@@ -465,6 +465,11 @@ button.button:disabled {
     gap: 1.5rem;
   }
 
+  .home-prints {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
   .teaser-grid {
     grid-template-columns: repeat(3, minmax(0, 12rem));
   }
@@ -992,7 +997,7 @@ html[data-season="everyday"] .invite-card.is-lead { outline: none; }
   .helper-portrait { height: 14.5rem; }
 
   .home-prints {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: stretch;
   }
 }
@@ -1014,3 +1019,112 @@ html[data-season="everyday"] .invite-card.is-lead { outline: none; }
   .hero-cover:hover,
   .teaser-grid a:hover { transform: none; }
 }
+
+/* 2027 calendar page */
+
+.preview-block {
+  margin-top: 2.75rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.preview-block > * + * {
+  margin-top: 0.8rem;
+}
+
+.calendar-page .pack > * + * {
+  margin-top: 0.85rem;
+}
+
+.calendar-page .pack h3 {
+  margin-top: 1.35rem;
+}
+
+.calendar-page .pack h3 + p {
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 720px) {
+  .holiday-table {
+    min-width: 0;
+  }
+
+  .holiday-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .holiday-table,
+  .holiday-table tbody,
+  .holiday-table tr,
+  .holiday-table tbody th,
+  .holiday-table td {
+    display: block;
+    width: auto;
+  }
+
+  .holiday-table tr {
+    padding: 0.8rem 0 0.9rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .holiday-table tbody th,
+  .holiday-table td {
+    border: 0;
+    padding: 0.12rem 0;
+  }
+
+  .holiday-table td::before {
+    content: attr(data-label);
+    display: block;
+    margin-top: 0.45rem;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4a4a4a;
+  }
+}
+
+.table-scroll {
+  overflow-x: auto;
+  margin-top: 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.holiday-table {
+  width: 100%;
+  min-width: 28rem;
+  border-collapse: collapse;
+  font-size: 0.98rem;
+  line-height: 1.4;
+}
+
+.holiday-table th,
+.holiday-table td {
+  padding: 0.65rem 0.85rem 0.65rem 0;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.holiday-table thead th {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4a4a4a;
+}
+
+.holiday-table tbody th {
+  font-weight: 500;
+  width: 40%;
+}
+
